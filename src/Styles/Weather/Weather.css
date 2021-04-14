@@ -1,0 +1,78 @@
+.weather{
+    margin: 0.3em;
+    background: transparent;
+    cursor: pointer;
+    min-width: 100px;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right:0.5em;
+    padding-top: 1.5em;
+    position: relative;
+    z-index: 5;
+    transition: transform 500ms;
+    object-fit: contain;
+    transition: 0.05s all;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter:blur(1em);
+    border-radius: 2px;
+
+}
+.weather:hover{
+    background: rgba(255,255,255,0.1);
+    backdrop-filter:blur(1em);
+    border-radius: 2px;
+}
+
+.weather:hover::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top:5.4em;
+    left: 1.7em;
+    right: 0;
+    width: 60%;
+    height: 50%;
+    transform: rotate(45deg);
+}
+.weather .weather__dia{
+
+}
+
+.weather .weather__dia>span{
+  font-size: 11px;
+}
+.weather__grados{
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+.weather__grados span:nth-child(1){
+    font-size: 23px;
+    margin-right: 0.3em;
+}
+.weather__icon{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.weather__state{
+    font-size: 12px;
+    width: 100%;
+}
+.weather__sunny{
+    position: absolute;
+    color: yellow;
+    top: -5px;
+    left: -4px;
+    z-index: 2;
+}
+.weather__cloud{
+      position: relative;
+      z-index: 11;
+}
+
+.weather__viento{
+    font-size: 11px;
+    margin-bottom:5px;
+}
+

@@ -1,0 +1,86 @@
+*{
+  margin:0;
+  padding: 0;
+}
+*:focus{
+  outline:none;
+}
+
+.App{
+  display: flex;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+.app__main{
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    flex-direction: column;
+    /* noche despejada : https://c.wallhere.com/photos/40/26/city_cityscape_lights_Taiwan_night_panorama_Taichung_sky-1986155.jpg!d */
+    /*noche profunda : https://c.wallhere.com/photos/b0/49/night_sky_dog_Chin_Fong_ArtStation-1952671.jpg!d*/
+  /*atardecer nublada : https://c.wallhere.com/photos/77/05/2880x1800_px_Canyon_clouds_Desert_sky_Stones-1860771.jpg!d*/
+    /*atardecer despejada : https://c.wallhere.com/photos/82/84/3840x2554_px_Beauty_boat_Calm_emotions_landscapes_life_love-1719069.jpg!d*/
+    /*Amanecer muy nublado : https://c.wallhere.com/photos/dd/f1/mountain_top_clouds_mountains_sky_snow_landscape_nature-1994861.jpg!d*/
+    /*iNVIERNO MUY FRIO :https://c.wallhere.com/photos/f1/a0/Germany_Bavaria_winter_snow_trees_sunset_mountains_church-1988407.jpg!d */
+    /*calor en primvera : https://c.wallhere.com/photos/75/a0/3900x3120_px_clouds_Dandelions_fields_Grasslands_nature_scenery_sky-1691343.jpg!d*/
+    /*clima perfecto : https://c.wallhere.com/photos/01/24/2500x1527_px_animal_ArseniXC_cat_original_Signed_sky_Tagme-1910243.jpg!d*/
+background-image: url('https://c.wallhere.com/photos/01/24/2500x1527_px_animal_ArseniXC_cat_original_Signed_sky_Tagme-1910243.jpg!d');
+background-position: center;
+background-size: cover;
+}
+.app__container{
+    position: relative;
+    
+}
+.app__today{
+    color: #536D84;
+    display: flex;
+    height: 40vh;
+    justify-content: center;
+}
+.app__card-list{
+      display: flex;
+      overflow-y: hidden;
+      padding: 15px;
+      margin-left: 5em;
+      margin-right: 5em;
+      margin-top: 2em;
+      scroll-behavior: smooth;
+}
+
+.app__card-list::-webkit-scrollbar {
+    display: none;
+}
+.app__button-left{
+    position: absolute;
+    top: 72%;
+    right:2%;
+    cursor: pointer;
+    /*color: #536D84;*/
+  }
+.app__button-right{
+    transform: rotate(182deg);
+    position: absolute;
+    cursor: pointer;
+     top: 72%;
+      left: 2%;
+    /*color: #536D84;*/
+}
+@media (max-width: 544px){
+    .app__card-list{
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 60vh;
+      margin-left: 2em;
+      margin-right: 2em;
+      margin-top:5em;
+      margin-bottom: 0.5em;
+    }
+    .app__button-left,
+    .app__button-right{
+        display: none;
+    }
+}
+
+
